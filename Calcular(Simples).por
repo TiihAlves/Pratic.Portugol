@@ -1,8 +1,10 @@
 programa {
   funcao inicio() {
     
-    inteiro v1,v2,op
-    real res
+    inteiro op
+    real res,v1,v2
+    
+
     
     // recebe os valores
     escreva("Digite um Valor: ")
@@ -18,29 +20,45 @@ programa {
     escreva("4 - Multiplicação \n")
     leia(op)
     // identifica operação e realiza o calculo
+    se(op<1 ou op>4){
+    	escreva ("Digite uma operação válida: \n")
+    	leia(op)
+    }
+    
     escolha(op)
     {
       caso 1:
         res = v1+v2
-        escreva("O resultado da adição de ",v1," e ",v2," é: ",res)
+        escreva("O resultado da adição é: ",res)
         pare
       caso 2:
         res = v1-v2
-        escreva("O resultado da Subtração de ",v1," e ",v2," é: ",res)
+        escreva("O resultado da Subtração é: ",res)
         pare
       caso 3:
         res = v1/v2
-        escreva("O resultado da Divisão de ",v1," e ",v2," é: ",res)
+        escreva("O resultado da Divisão é: ",res)
         pare
       caso 4:
         res = v1*v2
-        escreva("O resultado da Multiplicação de ",v1," e ",v2," é: ",res)
+        escreva("O resultado da Multiplicação é: ",res)
         pare
-      caso contrario :
-        escreva("Digite uma Operação válida! ")
+     
+    
     
     }
 
-
   }
 }
+
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 1012; 
+ * @PONTOS-DE-PARADA = ;
+ * @SIMBOLOS-INSPECIONADOS = ;
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
