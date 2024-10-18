@@ -1,11 +1,11 @@
 programa {
   funcao inicio() {
     
-    inteiro op
+    inteiro op,s
     real res,v1,v2
-    
+    logico sair=falso
 
-    
+    enquanto (sair == falso){
     // recebe os valores
     escreva("Digite um Valor: ")
     leia(v1)
@@ -29,25 +29,42 @@ programa {
     {
       caso 1:
         res = v1+v2
-        escreva("O resultado da adição é: ",res)
+        escreva("O resultado da adição é: ",res,"\n")
         pare
       caso 2:
         res = v1-v2
-        escreva("O resultado da Subtração é: ",res)
+        escreva("O resultado da Subtração é: ",res,"\n")
         pare
       caso 3:
         res = v1/v2
-        escreva("O resultado da Divisão é: ",res)
+        escreva("O resultado da Divisão é: ",res,"\n")
         pare
       caso 4:
         res = v1*v2
-        escreva("O resultado da Multiplicação é: ",res)
+        escreva("O resultado da Multiplicação é: ",res,"\n")
         pare
-     
-    
-    
+           
     }
 
+    escreva("Deseja realizar outra operação? \n")
+    escreva("1- Sim \t 2- Não\n")
+    leia(s)
+
+	se(s<1 ou s>2){
+		escreva("Digite uma operação válida: \n")
+		leia(s)
+	}
+	se (s==1){
+		limpa()
+		sair =falso
+	}
+	senao{
+		limpa()
+		escreva("Até a Próxima!\n")
+		sair = verdadeiro
+	}
+    
+    }
   }
 }
 
@@ -56,7 +73,7 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1012; 
+ * @POSICAO-CURSOR = 1307; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
